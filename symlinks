@@ -5,4 +5,5 @@
  vim
  gitconfig
  gitignore_global
+ git-completion.bash
  colordiffrc

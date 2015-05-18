@@ -66,6 +66,11 @@ if [ -r ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
+# adds git autocomplete
+if [ -f ~/.git-completion.bash ]; then
+    source ~/.git-completion.bash
+fi
+
 # OPAM configuration
 . /Users/kbuzsaki/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
