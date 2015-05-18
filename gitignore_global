@@ -1,0 +1,22 @@
+# global gitignore file
+
+# IntelliJ project files
+*.iml
+*.ipr
+*.iws
+
+# compiled files
+*.o
+*.class
+*.pyc
+
+# backup files
+*~
+*.swp
+
+# logs
+*.log   
+
+# dotfiles
+.*
+
