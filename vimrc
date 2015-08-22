@@ -16,14 +16,14 @@ set rtp+=~/.vim/bundle/Vundle.vim       " set vundle runtime
 call vundle#begin()                     " begin vundle block
 
 Plugin 'gmarik/Vundle.vim'              " let Vundle manage Vundle, required
-" Plugin 'Valloric/YouCompleteMe'       " does autocomplete for c++ and python
-Plugin 'davidhalter/jedi-vim'           " jedi vim handles python 3 better
+Plugin 'Valloric/YouCompleteMe'         " does autocomplete for c++ and python
+" Plugin 'davidhalter/jedi-vim'         " jedi vim handles python 3 better
 Plugin 'othree/eregex.vim'              " does perl compatible regex
 
 call vundle#end()                       " end vundle block
 
 " YouCompleteMe config file
-" let g:ycm_global_ycm_extra_conf = '~/.global_ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.global_ycm_extra_conf.py'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Events
