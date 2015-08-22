@@ -40,7 +40,7 @@ filetype plugin indent on
 autocmd FileType make setlocal noexpandtab
 
 " Trim whitespace on save
-autocmd BufWritePre *.py,*.html,*.css,*.js :%s/\s\+$//e
+autocmd BufWritePre *.py,*.html,*.css,*.js,*.go :%s/\s\+$//e
 
 " not sure what these do
 autocmd BufNewFile [Mm]akefile* set formatoptions=croql comments=:#
