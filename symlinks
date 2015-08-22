@@ -8,3 +8,5 @@
  git-completion.bash
  global_ycm_extra_conf.py
  colordiffrc
+ pylintrc
+ jshintrc

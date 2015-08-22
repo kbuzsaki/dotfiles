@@ -19,11 +19,15 @@ Plugin 'gmarik/Vundle.vim'              " let Vundle manage Vundle, required
 Plugin 'Valloric/YouCompleteMe'         " does autocomplete for c++ and python
 " Plugin 'davidhalter/jedi-vim'         " jedi vim handles python 3 better
 Plugin 'othree/eregex.vim'              " does perl compatible regex
+Plugin 'scrooloose/syntastic'           " does syntax checking
 
 call vundle#end()                       " end vundle block
 
 " YouCompleteMe config file
 let g:ycm_global_ycm_extra_conf = '~/.global_ycm_extra_conf.py'
+
+" Syntastic config
+let g:syntastic_javascript_checkers = ['jshint']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Events
@@ -36,7 +40,7 @@ filetype plugin indent on
 autocmd FileType make setlocal noexpandtab
 
 " Trim whitespace on save
-autocmd BufWritePre *.py :%s/\s\+$//e
+autocmd BufWritePre *.py,*.html,*.css,*.js :%s/\s\+$//e
 
 " not sure what these do
 autocmd BufNewFile [Mm]akefile* set formatoptions=croql comments=:#
