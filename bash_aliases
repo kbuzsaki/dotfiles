@@ -15,6 +15,8 @@ alias ll='ls -l'                              # long list
 alias la='ls -a'                              # all but . and ..
 alias l='ls -CF'                              #
 
+alias ssh='ssh -X'
+
 # colorize diffing and have them page with less
 function diff_color() { colordiff -u $* | less; }
 alias diff='diff_color'
