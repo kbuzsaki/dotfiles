@@ -52,7 +52,7 @@ ucsd=128.54.183.156
 home=24.6.177.127
 moebius=Kyle@$ucsd
 
-kserver=kyle@128.54.180.125
+kserver=kyle@kbuzsaki.com
 
 agcari=autograder@auto-grader.com
 agucsd=autograder@autograder.ucsd.edu
