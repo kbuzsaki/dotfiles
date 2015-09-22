@@ -43,6 +43,8 @@ export PLAY_HOME=/usr/local/play-1.2.4
 # concatenates the home directories to the path
 export PATH=$PATH:$ANT_HOME:$JAVA_HOME:$PLAY_HOME
 
+export GOPATH=$HOME/dev/go
+
 ################################################################################
 # Environment Variables Config
 ################################################################################

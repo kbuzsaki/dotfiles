@@ -36,8 +36,9 @@ let g:syntastic_javascript_checkers = ['jshint']
 " filetype detection[ON] plugin[ON] indent[ON]
 filetype plugin indent on       
 
-" Don't expand tabs for makefiles
+" Don't expand tabs for makefiles or go files
 autocmd FileType make setlocal noexpandtab
+autocmd FileType go setlocal noexpandtab
 
 " Trim whitespace on save
 autocmd BufWritePre *.py,*.html,*.css,*.js,*.go :%s/\s\+$//e
