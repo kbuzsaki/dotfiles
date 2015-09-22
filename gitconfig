@@ -13,9 +13,6 @@
 	autocrlf = input
 	excludesfile = ~/.gitignore_global
 	editor = vim
-	editor = /usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim
 [push]
 	default = simple
-[credential]
-	helper = osxkeychain
 

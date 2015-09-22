@@ -10,7 +10,7 @@ alias fgrep='fgrep --color=auto'              # show differences in colour
 # use ansi escape codes, dump to screen if the file is small enough
 alias less='less --quit-if-one-screen --no-init --RAW-CONTROL-CHARS' 
 
-alias ls='ls -h'                              # classify files in colour
+alias ls='ls --color -h'                              # classify files in colour
 alias ll='ls -l'                              # long list
 alias la='ls -a'                              # all but . and ..
 alias l='ls -CF'                              #
@@ -35,12 +35,6 @@ alias ocaml='rlwrap ocaml'
 
 alias play13='/usr/local/play1/play'
 
-# Mac specific
-#
-# use MacVim's vim instead of system vim
-alias vim='/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim'
-alias finder='open'
-alias pdflatex='/usr/texbin/pdflatex'
 
 alias localip='ifconfig | grep netmask | tail -n 1 | xargs | cut -f 2 -d" "'
 
