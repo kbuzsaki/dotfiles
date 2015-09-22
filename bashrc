@@ -44,8 +44,10 @@ export PLAY_HOME=/usr/local/play-1.2.4
 export PATH=$PATH:$ANT_HOME:$JAVA_HOME:$PLAY_HOME
 
 export GOPATH=$HOME/dev/go
-
 export PATH=$PATH:$GOPATH/bin
+
+HOME_BIN=$HOME/bin
+export PATH=$PATH:$HOME_BIN
 
 ################################################################################
 # Environment Variables Config
