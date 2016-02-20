@@ -13,6 +13,7 @@
 # backup files
 *~
 *.swp
+*.bak
 
 # logs
 *.log   
