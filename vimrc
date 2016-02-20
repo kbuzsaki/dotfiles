@@ -18,6 +18,7 @@ call vundle#begin()                     " begin vundle block
 Plugin 'gmarik/Vundle.vim'              " let Vundle manage Vundle, required
 Plugin 'Valloric/YouCompleteMe'         " does autocomplete for c++ and python
 " Plugin 'davidhalter/jedi-vim'         " jedi vim handles python 3 better
+Plugin 'fatih/vim-go'                   " go specific niceties
 Plugin 'othree/eregex.vim'              " does perl compatible regex
 Plugin 'scrooloose/syntastic'           " does syntax checking
 
@@ -30,6 +31,9 @@ let g:ycm_global_ycm_extra_conf = '~/.global_ycm_extra_conf.py'
 let g:syntastic_javascript_checkers = ['jshint']
 
 let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Events
