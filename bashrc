@@ -45,6 +45,8 @@ export PATH=$PATH:$ANT_HOME:$JAVA_HOME:$PLAY_HOME
 
 export GOPATH=$HOME/dev/go
 
+export PATH=$PATH:$GOPATH/bin
+
 ################################################################################
 # Environment Variables Config
 ################################################################################
