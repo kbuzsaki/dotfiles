@@ -49,11 +49,6 @@ export GOPATH=$HOME/dev/go
 # Environment Variables Config
 ################################################################################
 
-# ip for moebius-reactor
-ucsd=128.54.183.156
-home=24.6.177.127
-moebius=Kyle@$ucsd
-
 kserver=kyle@kbuzsaki.com
 
 agcari=autograder@auto-grader.com
