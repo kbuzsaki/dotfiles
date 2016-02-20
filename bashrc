@@ -43,8 +43,10 @@ export PLAY_HOME=/usr/local/play-1.2.4
 # concatenates the home directories to the path
 export PATH=$PATH:$ANT_HOME:$JAVA_HOME:$PLAY_HOME
 
+export GOROOT_BOOTSTRAP='/usr/local/Cellar/go/1.6/libexec'
+export GOROOT=$HOME/dev/go-compiler
 export GOPATH=$HOME/dev/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 HOME_BIN=$HOME/bin
 export PATH=$PATH:$HOME_BIN
