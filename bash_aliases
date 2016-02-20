@@ -44,4 +44,5 @@ alias pdflatex='/usr/texbin/pdflatex'
 
 alias localip='ifconfig | grep netmask | tail -n 1 | xargs | cut -f 2 -d" "'
 
+eval "$(thefuck --alias)"
 
