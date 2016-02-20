@@ -29,6 +29,8 @@ let g:ycm_global_ycm_extra_conf = '~/.global_ycm_extra_conf.py'
 " Syntastic config
 let g:syntastic_javascript_checkers = ['jshint']
 
+let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Events
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
