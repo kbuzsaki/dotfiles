@@ -10,3 +10,6 @@
  colordiffrc
  pylintrc
  jshintrc
+ pypirc
+ inputrc
+ editrc

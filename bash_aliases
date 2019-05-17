@@ -25,11 +25,26 @@ alias wdiff='wdiff_color'
 
 alias tailf='tail -f'
 
+# assist 'gi tcheckout' style typos
+function gi() {
+    # remove the 't' in 'tcheckout'
+    command=$(echo "$1" | cut -c 2- )
+    git $command "${@:2}"
+}
+alias ig='gi'
+alias igt='git'
+alias gti='git'
+alias gitgit='git'
+alias hg='git'
+
+alias givm='gvim'
+
 alias vi='vim'
 alias python='python3'
 alias pip='pip3'
 alias python2='\python'
 alias pip2='\pip'
+alias venv='. venv/bin/activate .'
 
 alias ocaml='rlwrap ocaml'
 
@@ -40,9 +55,13 @@ alias play13='/usr/local/play1/play'
 # use MacVim's vim instead of system vim
 alias vim='/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim'
 alias finder='open'
-alias pdflatex='/usr/texbin/pdflatex'
 
 alias localip='ifconfig | grep netmask | tail -n 1 | xargs | cut -f 2 -d" "'
 
-eval "$(thefuck --alias)"
+#eval "$(thefuck --alias)"
+
+alias hex='open -a "hex fiend"'
+#alias fuse='open -a fuse'
+alias fuse='/Users/kbuzsaki/dev/cse190/fuse/Fuse.app/Contents/MacOS/Fuse'
+
 
