@@ -1,4 +1,6 @@
 {
+    "esnext": true,
+    "esversion": 6,
     "sub": true,
     "shadow": true
 }

@@ -16,31 +16,47 @@ set rtp+=~/.vim/bundle/Vundle.vim       " set vundle runtime
 call vundle#begin()                     " begin vundle block
 
 Plugin 'gmarik/Vundle.vim'              " let Vundle manage Vundle, required
-Plugin 'Valloric/YouCompleteMe'         " does autocomplete for c++ and python
-" Plugin 'davidhalter/jedi-vim'         " jedi vim handles python 3 better
+" Plugin 'Valloric/YouCompleteMe'         " does autocomplete for c++ and python
+Plugin 'davidhalter/jedi-vim'         " jedi vim handles python 3 better
 Plugin 'fatih/vim-go'                   " go specific niceties
 Plugin 'othree/eregex.vim'              " does perl compatible regex
-Plugin 'scrooloose/syntastic'           " does syntax checking
+Plugin 'neomake/neomake'                " async linting
+" Plugin 'scrooloose/syntastic'           " does syntax checking
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()                       " end vundle block
 
 " YouCompleteMe config file
-let g:ycm_global_ycm_extra_conf = '~/.global_ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf = '~/.global_ycm_extra_conf.py'
 
 " Syntastic config
-let g:syntastic_javascript_checkers = ['jshint']
+" let g:syntastic_javascript_checkers = ['jshint']
 
-let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+" let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+" let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+"
+
+"let g:neomake_python_pylint_exe = 'pylint'
+"let g:neomake_python_pep8_exe = 'python3'
+let g:neomake_python_python_exe = "$(which python3)"
+"let g:neomake_python_pylint_args = ["--load-plugins=pylint_django"]
+
+let g:neomake_cpp_enable_markers=['clang']
+let g:neomake_cpp_clang_args = ["-std=c++14", "-Wextra", "-Wall", "-fsanitize=undefined", "-g"]
+
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Events
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " filetype detection[ON] plugin[ON] indent[ON]
-filetype plugin indent on       
+filetype plugin indent on
 
 " Don't expand tabs for makefiles or go files
 autocmd FileType make setlocal noexpandtab
@@ -49,10 +65,21 @@ autocmd FileType go setlocal noexpandtab
 " Trim whitespace on save
 autocmd BufWritePre *.py,*.html,*.css,*.js,*.go :%s/\s\+$//e
 
+" Run linter after save
+autocmd! BufWritePost * Neomake
+
 " not sure what these do
 autocmd BufNewFile [Mm]akefile* set formatoptions=croql comments=:#
 autocmd BufNewFile .vimrc,*.vim set formatoptions=croql comments=:\"
 autocmd FileType c,cpp,java set mps+==:;
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Control mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Tab Controls
+map <C-H> :execute "tabmove" tabpagenr() - 2 <CR>
+map <C-L> :execute "tabmove" tabpagenr() + 1 <CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theming
@@ -70,6 +97,8 @@ augroup markdown
   au!
   au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END     
+
+au BufRead,BufNewFile *.pyj set filetype=python
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim UI

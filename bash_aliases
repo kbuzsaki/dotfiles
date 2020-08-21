@@ -46,6 +46,12 @@ alias python2='\python'
 alias pip2='\pip'
 alias venv='. venv/bin/activate .'
 
+# bingosync
+
+alias gen_name='perl -pe "s/^.*generators\/(\w+)_generator.js.*$/\1/"'
+
+# misc other
+
 alias ocaml='rlwrap ocaml'
 
 alias play13='/usr/local/play1/play'
@@ -53,7 +59,6 @@ alias play13='/usr/local/play1/play'
 # Mac specific
 #
 # use MacVim's vim instead of system vim
-alias vim='/usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim'
 alias finder='open'
 
 alias localip='ifconfig | grep netmask | tail -n 1 | xargs | cut -f 2 -d" "'

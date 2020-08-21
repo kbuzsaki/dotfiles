@@ -9,15 +9,18 @@
     d = diff
     dc = diff --cached
     amend = commit --amend --no-edit
+    am = amend
     ff = merge --ff-only
-    xl = log --graph
+    xl = log --graph --all --oneline
+    xll = xl --stat
+    shelve = stash
+    unshelve = stash pop
 [color]
     ui = true
 [core]
 	autocrlf = input
 	excludesfile = ~/.gitignore_global
 	editor = vim
-	editor = /usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim
 [push]
 	default = simple
 [credential]

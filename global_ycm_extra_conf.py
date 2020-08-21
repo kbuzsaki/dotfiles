@@ -54,7 +54,7 @@ flags = [
 # relevant for c++ headers.
 # For a C project, you would set this to 'c' instead of 'c++'.
 '-x',
-'c++',
+'c',
 '-isystem',
 '../BoostParts',
 '-isystem',
@@ -85,6 +85,8 @@ flags = [
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1',
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include',
+'-I',
+'/Users/kbuzsaki/.include/'
 ]
 
 
